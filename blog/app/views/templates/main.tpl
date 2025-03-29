@@ -86,6 +86,7 @@
 			<script src="http://localhost/blog/public/assets/js/breakpoints.min.js"></script>
 			<script src="http://localhost/blog/public/assets/js/util.js"></script>
 			<script src="http://localhost/blog/public/assets/js/main.js"></script>
+			<script type="text/javascript" src="http://localhost/blog/public/assets/js/functions.js"></script>
 
 	</body>
 </html>

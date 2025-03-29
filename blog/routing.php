@@ -35,6 +35,7 @@ Utils::addRoute('nowyKomentarz', 'PanelCzytelnikNowyKomCtrl', ["czytelnik"]);
 Utils::addRoute('opublikujKomentarz', 'PanelCzytelnikNowyKomCtrl', ["czytelnik"]);
 
 Utils::addRoute('panelModerator', 'PanelModeratorCtrl', ["moderator"]);
+Utils::addRoute('panelModeratorFragment', 'PanelModeratorCtrl', ["moderator"]);
 Utils::addRoute('panelModeratorZmiana', 'PanelModeratorCtrl', ["moderator"]);
 
 Utils::addRoute('pelnaStrona', 'PelnaStronaCtrl');

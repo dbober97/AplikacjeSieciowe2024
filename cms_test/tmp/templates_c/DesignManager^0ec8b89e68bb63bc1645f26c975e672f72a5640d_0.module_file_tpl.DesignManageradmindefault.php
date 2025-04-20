@@ -1,18 +1,18 @@
 <?php
-/* Smarty version 4.2.1, created on 2025-04-16 14:44:07
+/* Smarty version 4.2.1, created on 2025-04-20 14:54:16
   from 'module_file_tpl:DesignManager;admin_defaultadmin_tpltype_tooltip.tpl' */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '4.2.1',
-  'unifunc' => 'content_67ffa617ab5b18_01741247',
+  'unifunc' => 'content_6804ee78599317_55755125',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
     '0ec8b89e68bb63bc1645f26c975e672f72a5640d' => 
     array (
       0 => 'module_file_tpl:DesignManager;admin_defaultadmin_tpltype_tooltip.tpl',
-      1 => 1743727897,
+      1 => 1745009323,
       2 => 'module_file_tpl',
     ),
   ),
@@ -20,7 +20,7 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   array (
   ),
 ),false)) {
-function content_67ffa617ab5b18_01741247 (Smarty_Internal_Template $_smarty_tpl) {
+function content_6804ee78599317_55755125 (Smarty_Internal_Template $_smarty_tpl) {
 $_smarty_tpl->_checkPlugins(array(0=>array('file'=>'C:\\xampp-starszy\\xampp\\htdocs\\cms_test\\lib\\plugins\\modifier.summarize.php','function'=>'smarty_modifier_summarize',),));
 $_smarty_tpl->_assignInScope('tpltype', $_smarty_tpl->tpl_vars['list_all_types']->value[$_smarty_tpl->tpl_vars['type_id']->value]);?><strong><?php echo $_smarty_tpl->tpl_vars['mod']->value->Lang('prompt_id');?>
 :</strong>&nbsp;<?php echo $_smarty_tpl->tpl_vars['type_id']->value;?>

@@ -1,18 +1,18 @@
 <?php
-/* Smarty version 4.2.1, created on 2025-04-16 15:46:41
+/* Smarty version 4.2.1, created on 2025-04-20 12:51:21
   from 'module_file_tpl:AceSyntax;AdminSyntaxGenerateHeader.tpl' */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '4.2.1',
-  'unifunc' => 'content_67ffb4c123a9a6_21056408',
+  'unifunc' => 'content_6804d1a9a5cf89_15088737',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
     '29ce7793e9b7b6ba495a4c4641baeddd3b9f9959' => 
     array (
       0 => 'module_file_tpl:AceSyntax;AdminSyntaxGenerateHeader.tpl',
-      1 => 1744805691,
+      1 => 1745009323,
       2 => 'module_file_tpl',
     ),
   ),
@@ -20,7 +20,7 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   array (
   ),
 ),false)) {
-function content_67ffb4c123a9a6_21056408 (Smarty_Internal_Template $_smarty_tpl) {
+function content_6804d1a9a5cf89_15088737 (Smarty_Internal_Template $_smarty_tpl) {
 $_smarty_tpl->_checkPlugins(array(0=>array('file'=>'C:\\xampp-starszy\\xampp\\htdocs\\cms_test\\lib\\smarty\\plugins\\modifier.replace.php','function'=>'smarty_modifier_replace',),));
 ?>
 <link rel="stylesheet" type="text/css" href="<?php echo $_smarty_tpl->tpl_vars['mod']->value->GetModuleURLPath();?>

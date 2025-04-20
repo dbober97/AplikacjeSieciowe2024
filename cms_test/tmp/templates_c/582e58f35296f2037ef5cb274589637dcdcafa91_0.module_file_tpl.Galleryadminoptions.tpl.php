@@ -1,18 +1,18 @@
 <?php
-/* Smarty version 4.2.1, created on 2025-04-16 18:04:45
+/* Smarty version 4.2.1, created on 2025-04-20 12:51:20
   from 'module_file_tpl:Gallery;adminoptions.tpl' */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '4.2.1',
-  'unifunc' => 'content_67ffd51d2d5bf4_94985821',
+  'unifunc' => 'content_6804d1a89956a3_44567681',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
     '582e58f35296f2037ef5cb274589637dcdcafa91' => 
     array (
       0 => 'module_file_tpl:Gallery;adminoptions.tpl',
-      1 => 1743730006,
+      1 => 1745146170,
       2 => 'module_file_tpl',
     ),
   ),
@@ -20,7 +20,7 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   array (
   ),
 ),false)) {
-function content_67ffd51d2d5bf4_94985821 (Smarty_Internal_Template $_smarty_tpl) {
+function content_6804d1a89956a3_44567681 (Smarty_Internal_Template $_smarty_tpl) {
 echo $_smarty_tpl->tpl_vars['startform']->value;?>
 
 	<div class="pageoverflow">
@@ -56,27 +56,6 @@ echo $_smarty_tpl->tpl_vars['startform']->value;?>
  <?php echo $_smarty_tpl->tpl_vars['jpgquality_help']->value;?>
 </p>
 	</div>
-	<?php if ($_smarty_tpl->tpl_vars['imagewebsupport']->value) {?>
-	<div class="pageoverflow">
-		<p class="pagetext"><?php echo $_smarty_tpl->tpl_vars['imagewebpquality']->value;?>
-:</p>
-		<p class="pageinput"><?php echo $_smarty_tpl->tpl_vars['input_imagewebpquality']->value;?>
- <?php echo $_smarty_tpl->tpl_vars['webpquality_help']->value;?>
-</p>
-	</div>
-	<div class="pageoverflow">
-		<p class="pagetext"><?php echo $_smarty_tpl->tpl_vars['thumbwebpquality']->value;?>
-:</p>
-		<p class="pageinput"><?php echo $_smarty_tpl->tpl_vars['input_thumbwebpquality']->value;?>
- <?php echo $_smarty_tpl->tpl_vars['webpquality_help']->value;?>
-</p>
-	</div>
-    <?php } else { ?>
-    <div class="pageoverflow">
-        <p class="pagetext"><em><?php echo $_smarty_tpl->tpl_vars['webpmissing_help']->value;?>
-</em></p>
-    </div>
-    <?php }?>
 	<div class="pageoverflow">
 		<p class="pagetext"><?php echo $_smarty_tpl->tpl_vars['searchimages']->value;?>
 :</p>

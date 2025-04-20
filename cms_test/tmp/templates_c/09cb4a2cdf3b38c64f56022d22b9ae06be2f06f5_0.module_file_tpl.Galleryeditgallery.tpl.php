@@ -1,18 +1,18 @@
 <?php
-/* Smarty version 4.2.1, created on 2025-04-16 18:04:51
+/* Smarty version 4.2.1, created on 2025-04-20 12:51:28
   from 'module_file_tpl:Gallery;editgallery.tpl' */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '4.2.1',
-  'unifunc' => 'content_67ffd523b44353_36008078',
+  'unifunc' => 'content_6804d1b0249492_16409544',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
     '09cb4a2cdf3b38c64f56022d22b9ae06be2f06f5' => 
     array (
       0 => 'module_file_tpl:Gallery;editgallery.tpl',
-      1 => 1743730006,
+      1 => 1745146170,
       2 => 'module_file_tpl',
     ),
   ),
@@ -20,7 +20,7 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   array (
   ),
 ),false)) {
-function content_67ffd523b44353_36008078 (Smarty_Internal_Template $_smarty_tpl) {
+function content_6804d1b0249492_16409544 (Smarty_Internal_Template $_smarty_tpl) {
 $_smarty_tpl->_checkPlugins(array(0=>array('file'=>'C:\\xampp-starszy\\xampp\\htdocs\\cms_test\\lib\\smarty\\plugins\\function.cycle.php','function'=>'smarty_function_cycle',),));
 if (!empty($_smarty_tpl->tpl_vars['uploadimages']->value)) {?>
 

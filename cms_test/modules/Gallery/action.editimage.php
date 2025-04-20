@@ -102,12 +102,12 @@ if ($params['mode'] == 'edit')
 	$smarty->assign('formstart2', $this->CreateFormStart($id, 'do_editthumb', $returnid, 'post', '', false, '', $params));
 	$smarty->assign('formend2', $this->CreateFormEnd());
 	$smarty->assign('hidden2', $this->CreateInputHidden($id, 'fid', $file['fileid']) .
-			  $this->CreateInputHidden($id, 'gid', $file['galleryid']) .
-			  $this->CreateInputHidden($id, 'x1', '') .
-			  $this->CreateInputHidden($id, 'y1', '') .
-			  $this->CreateInputHidden($id, 'x2', '') .
-			  $this->CreateInputHidden($id, 'y2', '') .
-			  $this->CreateInputHidden($id, 'scale', $imgscale));
+			$this->CreateInputHidden($id, 'gid', $file['galleryid']) .
+			$this->CreateInputHidden($id, 'x1', '') .
+			$this->CreateInputHidden($id, 'y1', '') .
+			$this->CreateInputHidden($id, 'x2', '') .
+			$this->CreateInputHidden($id, 'y2', '') .
+			$this->CreateInputHidden($id, 'scale', $imgscale));
 	$smarty->assign('editthumb_help', $this->Lang('editthumb_help'));
 	$smarty->assign('thumb_current', $this->Lang('thumb_current'));
 	$smarty->assign('thumb_preview', $this->Lang('thumb_preview'));

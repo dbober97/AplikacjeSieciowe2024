@@ -9,7 +9,7 @@
 #-------------------------------------------------------------------------------
 
 if (!function_exists('cmsms'))
-	exit;
+  exit;
 
 
 // setup directories and/or check if writable
@@ -17,16 +17,16 @@ $config = cmsms()->GetConfig();
 $dirs = array(cms_join_path($this->GetModulePath(), 'templates'), cms_join_path($this->GetModulePath(), 'templates', 'css'), $config['image_uploads_path'], cms_join_path($config['image_uploads_path'], DEFAULT_GALLERY_PATH), cms_join_path($config['image_uploads_path'], DEFAULT_GALLERYTHUMBS_PATH));
 foreach ($dirs as $dir)
 {
-	if (!is_dir($dir))
-	{
-		mkdir($dir);
-	}
-	if (!is_writable($dir))
-	{
-		//return error to ModuleManager
-		$tmp = lang('errordirectorynotwritable') . ' > ' . $dir;
-		return $tmp;
-	}
+  if (!is_dir($dir))
+  {
+    mkdir($dir);
+  }
+  if (!is_writable($dir))
+  {
+    //return error to ModuleManager
+    $tmp = lang('errordirectorynotwritable') . ' > ' . $dir;
+    return $tmp;
+  }
 }
 
 
@@ -115,17 +115,17 @@ $templates = array('AE-Gallery', 'Cycle', 'Fancybox', 'gallerytree', 'Lightbox',
 
 foreach ($templates as $template)
 {
-	$fn = cms_join_path($this->GetModulePath(), 'templates', 'Gallery-tpl-' . $template . '.xml');
-	if (file_exists($fn))
-	{
-		$xml = @file_get_contents($fn);
-		include 'function.importtemplate.php';
-		if ($template == 'prettyPhoto')
-		{
-			$this->SetPreference('default_template_contents', $templatecode);
-			$this->SetPreference('current_template', $template);
-		}
-	}
+  $fn = cms_join_path($this->GetModulePath(), 'templates', 'Gallery-tpl-' . $template . '.xml');
+  if (file_exists($fn))
+  {
+    $xml = @file_get_contents($fn);
+    include 'function.importtemplate.php';
+    if ($template == 'prettyPhoto')
+    {
+      $this->SetPreference('default_template_contents', $templatecode);
+      $this->SetPreference('current_template', $template);
+    }
+  }
 }
 
 // create preferences
@@ -137,8 +137,6 @@ $this->SetPreference('maximagewidth', 800);
 $this->SetPreference('maximageheight', 640);
 $this->SetPreference('imagejpgquality', 80);
 $this->SetPreference('thumbjpgquality', 80);
-$this->SetPreference('imagewebpquality', 90);
-$this->SetPreference('thumbwebpquality', 90);
 $this->SetPreference('searchimages', false);
 $this->SetPreference('use_permissions', false);
 $this->SetPreference('newgalleries_active', true);

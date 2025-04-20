@@ -31,9 +31,6 @@ switch ($type)
 	case 'gif':
 		header("Content-type: image/gif");
 		break;
-	case 'webp':
-		header("content-type: image/webp");
-		break;
 	default:
 		header("Content-type: image/gif");
 		$thumb = 'images/error.gif';

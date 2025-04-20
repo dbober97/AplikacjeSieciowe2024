@@ -1,18 +1,18 @@
 <?php
-/* Smarty version 4.2.1, created on 2025-04-16 15:46:40
+/* Smarty version 4.2.1, created on 2025-04-20 12:51:21
   from 'module_file_tpl:AceSyntax;ace_top.tpl' */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '4.2.1',
-  'unifunc' => 'content_67ffb4c0ac09b2_44168510',
+  'unifunc' => 'content_6804d1a9157fc0_21319900',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
     '1a2f1e9d9db401f83b37fc0ae3fcce0b71cbe203' => 
     array (
       0 => 'module_file_tpl:AceSyntax;ace_top.tpl',
-      1 => 1744805691,
+      1 => 1745009323,
       2 => 'module_file_tpl',
     ),
   ),
@@ -20,7 +20,7 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   array (
   ),
 ),false)) {
-function content_67ffb4c0ac09b2_44168510 (Smarty_Internal_Template $_smarty_tpl) {
+function content_6804d1a9157fc0_21319900 (Smarty_Internal_Template $_smarty_tpl) {
 ?><div class="(ti)_toolbar"><div class="ace-ui-toolbar cf"><div class="ace-toggle-editor ace-left"><input type="radio" id="(ti)_on" class="ace-toggle ace-radio ace-toggle-left" name="radio_(#)" checked="checked" /><label class="ace-tooltip" data-tip="<?php echo $_smarty_tpl->tpl_vars['mod']->value->Lang('highlighter_on');?>
 "for="(ti)_on"><?php echo $_smarty_tpl->tpl_vars['mod']->value->Lang('on');?>
 </label><input type="radio" id="(ti)_off" class="ace-toggle ace-radio ace-toggle-right" name="radio_(#)" /><label class="ace-tooltip" data-tip="<?php echo $_smarty_tpl->tpl_vars['mod']->value->Lang('highlighter_off');?>

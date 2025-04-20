@@ -13,9 +13,9 @@ $smarty->assign('input_allowed_extensions', $this->CreateInputText($id, 'allowed
 
 $smarty->assign('prompt_imagesize', $this->Lang('maxsize'));
 $smarty->assign('imagesize', $this->Lang('width') . ':&nbsp;' .
-		  $this->CreateInputText($id, 'maximagewidth', $this->GetPreference('maximagewidth', 800), 4, 4) .
-		  '&nbsp;&nbsp;&nbsp;' . $this->Lang('height') . ':&nbsp;' .
-		  $this->CreateInputText($id, 'maximageheight', $this->GetPreference('maximageheight', 800), 4, 4)
+		$this->CreateInputText($id, 'maximagewidth', $this->GetPreference('maximagewidth', 800), 4, 4) .
+		'&nbsp;&nbsp;&nbsp;' . $this->Lang('height') . ':&nbsp;' .
+		$this->CreateInputText($id, 'maximageheight', $this->GetPreference('maximageheight', 800), 4, 4)
 );
 
 $smarty->assign('imagejpgquality', $this->Lang('imagejpgquality'));
@@ -24,18 +24,6 @@ $smarty->assign('input_imagejpgquality', $this->CreateInputText($id, 'imagejpgqu
 $smarty->assign('thumbjpgquality', $this->Lang('thumbjpgquality'));
 $smarty->assign('input_thumbjpgquality', $this->CreateInputText($id, 'thumbjpgquality', $this->GetPreference('thumbjpgquality', 80), 4, 4));
 $smarty->assign('jpgquality_help', $this->Lang('jpgquality_help'));
-
-if (gd_info()['WebP Support'])
-{
-	$smarty->assign('imagewebsupport', 1);
-	$smarty->assign('webpmissing_help', $this->Lang('webpmissing_help'));
-}
-$smarty->assign('imagewebpquality', $this->Lang('imagewebpquality'));
-$smarty->assign('input_imagewebpquality', $this->CreateInputText($id, 'imagewebpquality', $this->GetPreference('imagewebpquality', 90), 4, 4));
-
-$smarty->assign('thumbwebpquality', $this->Lang('thumbwebpquality'));
-$smarty->assign('input_thumbwebpquality', $this->CreateInputText($id, 'thumbwebpquality', $this->GetPreference('thumbwebpquality', 90), 4, 4));
-$smarty->assign('webpquality_help', $this->Lang('webpquality_help'));
 
 $smarty->assign('searchimages', $this->Lang('searchimages'));
 $smarty->assign('input_searchimages', $this->CreateInputCheckbox($id, 'searchimages', true, $this->GetPreference('searchimages', false)));

@@ -1,18 +1,18 @@
 <?php
-/* Smarty version 4.2.1, created on 2025-04-16 20:02:23
+/* Smarty version 4.2.1, created on 2025-04-20 14:52:26
   from 'tpl_body:30' */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '4.2.1',
-  'unifunc' => 'content_67fff0af5a3a47_14971939',
+  'unifunc' => 'content_6804ee0a74da76_32448143',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
     'e929a2c9d74a66a5213b8a066517df683c2aaaa4' => 
     array (
       0 => 'tpl_body:30',
-      1 => '1744826435',
+      1 => '1745100128',
       2 => 'tpl_body',
     ),
   ),
@@ -20,17 +20,15 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   array (
   ),
 ),false)) {
-function content_67fff0af5a3a47_14971939 (Smarty_Internal_Template $_smarty_tpl) {
-$_smarty_tpl->_checkPlugins(array(0=>array('file'=>'C:\\xampp-starszy\\xampp\\htdocs\\cms_test\\lib\\plugins\\function.global_content.php','function'=>'smarty_function_global_content',),1=>array('file'=>'C:\\xampp-starszy\\xampp\\htdocs\\cms_test\\lib\\plugins\\function.sitename.php','function'=>'smarty_function_sitename',),));
+function content_6804ee0a74da76_32448143 (Smarty_Internal_Template $_smarty_tpl) {
+$_smarty_tpl->_checkPlugins(array(0=>array('file'=>'C:\\xampp-starszy\\xampp\\htdocs\\cms_test\\lib\\plugins\\function.global_content.php','function'=>'smarty_function_global_content',),));
 echo smarty_function_global_content(array('name'=>'a_top'),$_smarty_tpl);?>
 
 				<!-- Main -->
 					<div id="main">
 						<div class="inner">
 							<header>
-								<h1><?php echo smarty_function_sitename(array(),$_smarty_tpl);?>
-</h1>
-								<p>Krótki opis zawartości strony</p>
+								<p>Witamy na naszej stronie :) Zapraszamy wkrótce!</p>
 							</header>
 							<?php CMS_Content_Block::smarty_internal_fetch_contentblock(array(),$_smarty_tpl); ?>
 							<section class="tiles">

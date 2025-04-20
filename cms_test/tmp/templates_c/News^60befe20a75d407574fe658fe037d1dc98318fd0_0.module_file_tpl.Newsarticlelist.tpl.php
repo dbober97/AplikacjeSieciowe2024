@@ -1,18 +1,18 @@
 <?php
-/* Smarty version 4.2.1, created on 2025-04-16 17:05:29
+/* Smarty version 4.2.1, created on 2025-04-20 15:15:32
   from 'module_file_tpl:News;articlelist.tpl' */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '4.2.1',
-  'unifunc' => 'content_67ffc73965bb70_51256907',
+  'unifunc' => 'content_6804f374b19cc1_91284384',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
     '60befe20a75d407574fe658fe037d1dc98318fd0' => 
     array (
       0 => 'module_file_tpl:News;articlelist.tpl',
-      1 => 1743727915,
+      1 => 1745009323,
       2 => 'module_file_tpl',
     ),
   ),
@@ -20,7 +20,7 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   array (
   ),
 ),false)) {
-function content_67ffc73965bb70_51256907 (Smarty_Internal_Template $_smarty_tpl) {
+function content_6804f374b19cc1_91284384 (Smarty_Internal_Template $_smarty_tpl) {
 $_smarty_tpl->_checkPlugins(array(0=>array('file'=>'C:\\xampp-starszy\\xampp\\htdocs\\cms_test\\admin\\plugins\\function.cms_help.php','function'=>'smarty_function_cms_help',),1=>array('file'=>'C:\\xampp-starszy\\xampp\\htdocs\\cms_test\\lib\\smarty\\plugins\\function.html_options.php','function'=>'smarty_function_html_options',),2=>array('file'=>'C:\\xampp-starszy\\xampp\\htdocs\\cms_test\\lib\\plugins\\function.cms_action_url.php','function'=>'smarty_cms_function_cms_action_url',),3=>array('file'=>'C:\\xampp-starszy\\xampp\\htdocs\\cms_test\\admin\\plugins\\function.admin_icon.php','function'=>'smarty_function_admin_icon',),4=>array('file'=>'C:\\xampp-starszy\\xampp\\htdocs\\cms_test\\lib\\plugins\\function.form_start.php','function'=>'smarty_function_form_start',),5=>array('file'=>'C:\\xampp-starszy\\xampp\\htdocs\\cms_test\\lib\\plugins\\function.cms_pageoptions.php','function'=>'smarty_function_cms_pageoptions',),6=>array('file'=>'C:\\xampp-starszy\\xampp\\htdocs\\cms_test\\lib\\plugins\\function.form_end.php','function'=>'smarty_function_form_end',),7=>array('file'=>'C:\\xampp-starszy\\xampp\\htdocs\\cms_test\\lib\\plugins\\modifier.cms_escape.php','function'=>'smarty_modifier_cms_escape',),8=>array('file'=>'C:\\xampp-starszy\\xampp\\htdocs\\cms_test\\lib\\plugins\\modifier.cms_date_format.php','function'=>'smarty_modifier_cms_date_format',),));
 echo '<script'; ?>
  type="text/javascript">

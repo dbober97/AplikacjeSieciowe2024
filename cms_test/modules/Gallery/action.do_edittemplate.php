@@ -8,8 +8,7 @@
 # This project's homepage is: http://www.cmsmadesimple.org
 #-------------------------------------------------------------------------------
 
-if (!function_exists('cmsms'))
-	exit;
+if (!function_exists('cmsms')) exit;
 
 if (isset($params['cancel']))
 {
@@ -39,8 +38,8 @@ if (empty($params['templatecontent']))
 
 if (isset($params['resetbutton']))
 {
-	$fn = cms_join_path($this->GetModulePath(), 'templates', 'Gallery-tpl-' . $params['template'] . '.xml');
-	if (file_exists($fn))
+  $fn = cms_join_path($this->GetModulePath(), 'templates', 'Gallery-tpl-' . $params['template'] . '.xml');
+  if (file_exists($fn))
 	{
 		$xml = @file_get_contents($fn);
 		$params['overwrite'] = 1;
@@ -57,7 +56,7 @@ else
 	$alias = str_replace('__', '_', str_replace('-', '_', munge_string_to_url($params['template'])));
 	if (empty($templatecss))
 	{
-		@unlink(cms_join_path($this->GetModulePath(), 'templates', 'css', $alias . '.css'));
+    @unlink(cms_join_path($this->GetModulePath(), 'templates', 'css', $alias . '.css'));
 	}
 	else
 	{

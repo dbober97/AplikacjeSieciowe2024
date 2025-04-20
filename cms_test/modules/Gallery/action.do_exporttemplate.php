@@ -35,16 +35,16 @@ function Gettplfiles($root, $path) {
 				if (is_dir($root . $path . $file))
 				{
 					$output[] = array(
-						 'filename' => $path . $file . "/",
-						 'isdir' => 1
+						'filename' => $path . $file . "/",
+						'isdir' => 1
 					);
 					$output = array_merge($output, Gettplfiles($root, $path . $file . "/"));
 				}
 				else
 				{
 					$output[] = array(
-						 'filename' => $path . $file,
-						 'isdir' => 0
+						'filename' => $path . $file,
+						'isdir' => 0
 					);
 				}
 			}

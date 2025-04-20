@@ -1,11 +1,11 @@
 <?php
-/* Smarty version 4.2.1, created on 2025-04-16 14:43:14
+/* Smarty version 4.2.1, created on 2025-04-20 12:52:12
   from 'cms_template:Simplex Footer Navigation' */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '4.2.1',
-  'unifunc' => 'content_67ffa5e2c86758_97392788',
+  'unifunc' => 'content_6804d1dc482fa8_54336605',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
@@ -20,19 +20,19 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   array (
   ),
 ),false)) {
-function content_67ffa5e2c86758_97392788 (Smarty_Internal_Template $_smarty_tpl) {
+function content_6804d1dc482fa8_54336605 (Smarty_Internal_Template $_smarty_tpl) {
 $_smarty_tpl->smarty->ext->_tplFunction->registerTplFunctions($_smarty_tpl, array (
   'do_footer_class' => 
   array (
     'compiled_filepath' => 'C:\\xampp-starszy\\xampp\\htdocs\\cms_test\\tmp\\templates_c\\^b9a70c7aee91cfc7805c871c3f7b053f71bd72fe_0.cms_template.SimplexFooterNavigation.php',
     'uid' => 'b9a70c7aee91cfc7805c871c3f7b053f71bd72fe',
-    'call_name' => 'smarty_template_function_do_footer_class_131039380467ffa5e2c5d755_73383125',
+    'call_name' => 'smarty_template_function_do_footer_class_616493866804d1dc41d636_21283544',
   ),
   'Simplex_footer_menu' => 
   array (
     'compiled_filepath' => 'C:\\xampp-starszy\\xampp\\htdocs\\cms_test\\tmp\\templates_c\\^b9a70c7aee91cfc7805c871c3f7b053f71bd72fe_0.cms_template.SimplexFooterNavigation.php',
     'uid' => 'b9a70c7aee91cfc7805c871c3f7b053f71bd72fe',
-    'call_name' => 'smarty_template_function_Simplex_footer_menu_131039380467ffa5e2c5d755_73383125',
+    'call_name' => 'smarty_template_function_Simplex_footer_menu_616493866804d1dc41d636_21283544',
   ),
 ));
 $_smarty_tpl->_assignInScope('main_id', ' id=\'footer-menu\'');
@@ -40,19 +40,19 @@ if ((isset($_smarty_tpl->tpl_vars['nodes']->value))) {
 $_smarty_tpl->smarty->ext->_tplFunction->callTemplateFunction($_smarty_tpl, 'Simplex_footer_menu', array('data'=>$_smarty_tpl->tpl_vars['nodes']->value,'depth'=>'0','ul_class'=>'cf'), true);
 }
 }
-/* smarty_template_function_do_footer_class_131039380467ffa5e2c5d755_73383125 */
-if (!function_exists('smarty_template_function_do_footer_class_131039380467ffa5e2c5d755_73383125')) {
-function smarty_template_function_do_footer_class_131039380467ffa5e2c5d755_73383125(Smarty_Internal_Template $_smarty_tpl,$params) {
+/* smarty_template_function_do_footer_class_616493866804d1dc41d636_21283544 */
+if (!function_exists('smarty_template_function_do_footer_class_616493866804d1dc41d636_21283544')) {
+function smarty_template_function_do_footer_class_616493866804d1dc41d636_21283544(Smarty_Internal_Template $_smarty_tpl,$params) {
 foreach ($params as $key => $value) {
 $_smarty_tpl->tpl_vars[$key] = new Smarty_Variable($value, $_smarty_tpl->isRenderingCache);
 }
 if (count($_smarty_tpl->tpl_vars['classes']->value) > 0) {?> class='<?php echo implode(' ',$_smarty_tpl->tpl_vars['classes']->value);?>
 '<?php }
 }}
-/*/ smarty_template_function_do_footer_class_131039380467ffa5e2c5d755_73383125 */
-/* smarty_template_function_Simplex_footer_menu_131039380467ffa5e2c5d755_73383125 */
-if (!function_exists('smarty_template_function_Simplex_footer_menu_131039380467ffa5e2c5d755_73383125')) {
-function smarty_template_function_Simplex_footer_menu_131039380467ffa5e2c5d755_73383125(Smarty_Internal_Template $_smarty_tpl,$params) {
+/*/ smarty_template_function_do_footer_class_616493866804d1dc41d636_21283544 */
+/* smarty_template_function_Simplex_footer_menu_616493866804d1dc41d636_21283544 */
+if (!function_exists('smarty_template_function_Simplex_footer_menu_616493866804d1dc41d636_21283544')) {
+function smarty_template_function_Simplex_footer_menu_616493866804d1dc41d636_21283544(Smarty_Internal_Template $_smarty_tpl,$params) {
 $params = array_merge(array('depth'=>'1'), $params);
 foreach ($params as $key => $value) {
 $_smarty_tpl->tpl_vars[$key] = new Smarty_Variable($value, $_smarty_tpl->isRenderingCache);
@@ -118,5 +118,5 @@ $_smarty_tpl->smarty->ext->_tplFunction->callTemplateFunction($_smarty_tpl, 'Sim
 }
 $_smarty_tpl->smarty->ext->_foreach->restore($_smarty_tpl, 1);?></ul><?php
 }}
-/*/ smarty_template_function_Simplex_footer_menu_131039380467ffa5e2c5d755_73383125 */
+/*/ smarty_template_function_Simplex_footer_menu_616493866804d1dc41d636_21283544 */
 }

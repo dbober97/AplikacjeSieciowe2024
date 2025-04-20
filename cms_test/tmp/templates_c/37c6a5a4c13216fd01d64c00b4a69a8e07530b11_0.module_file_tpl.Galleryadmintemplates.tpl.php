@@ -1,18 +1,18 @@
 <?php
-/* Smarty version 4.2.1, created on 2025-04-16 18:04:44
+/* Smarty version 4.2.1, created on 2025-04-20 12:51:20
   from 'module_file_tpl:Gallery;admintemplates.tpl' */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '4.2.1',
-  'unifunc' => 'content_67ffd51cc60192_32809148',
+  'unifunc' => 'content_6804d1a8257cf8_22760808',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
     '37c6a5a4c13216fd01d64c00b4a69a8e07530b11' => 
     array (
       0 => 'module_file_tpl:Gallery;admintemplates.tpl',
-      1 => 1743730006,
+      1 => 1745146170,
       2 => 'module_file_tpl',
     ),
   ),
@@ -20,7 +20,7 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   array (
   ),
 ),false)) {
-function content_67ffd51cc60192_32809148 (Smarty_Internal_Template $_smarty_tpl) {
+function content_6804d1a8257cf8_22760808 (Smarty_Internal_Template $_smarty_tpl) {
 ?><div class="pageoverflow">
   <p class="pageoptions"><?php echo $_smarty_tpl->tpl_vars['newtemplatelink']->value;?>
 </p>

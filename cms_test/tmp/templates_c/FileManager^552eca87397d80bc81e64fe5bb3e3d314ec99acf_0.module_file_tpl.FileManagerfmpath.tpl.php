@@ -1,18 +1,18 @@
 <?php
-/* Smarty version 4.2.1, created on 2025-04-16 17:05:34
+/* Smarty version 4.2.1, created on 2025-04-20 14:54:39
   from 'module_file_tpl:FileManager;fmpath.tpl' */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '4.2.1',
-  'unifunc' => 'content_67ffc73e8f5116_60063346',
+  'unifunc' => 'content_6804ee8fa11755_17188579',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
     '552eca87397d80bc81e64fe5bb3e3d314ec99acf' => 
     array (
       0 => 'module_file_tpl:FileManager;fmpath.tpl',
-      1 => 1743727904,
+      1 => 1745009323,
       2 => 'module_file_tpl',
     ),
   ),
@@ -20,7 +20,7 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   array (
   ),
 ),false)) {
-function content_67ffc73e8f5116_60063346 (Smarty_Internal_Template $_smarty_tpl) {
+function content_6804ee8fa11755_17188579 (Smarty_Internal_Template $_smarty_tpl) {
 ?><h3><?php echo $_smarty_tpl->tpl_vars['mod']->value->Lang('currentpath');?>
 
    <span class="pathselector">

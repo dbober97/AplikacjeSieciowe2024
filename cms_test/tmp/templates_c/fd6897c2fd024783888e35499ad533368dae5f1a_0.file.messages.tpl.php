@@ -1,18 +1,18 @@
 <?php
-/* Smarty version 4.2.1, created on 2025-04-16 14:42:08
+/* Smarty version 4.2.1, created on 2025-04-20 12:50:54
   from 'C:\xampp-starszy\xampp\htdocs\cms_test\admin\themes\OneEleven\templates\messages.tpl' */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '4.2.1',
-  'unifunc' => 'content_67ffa5a0c73333_91405473',
+  'unifunc' => 'content_6804d18e171bd6_21277275',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
     'fd6897c2fd024783888e35499ad533368dae5f1a' => 
     array (
       0 => 'C:\\xampp-starszy\\xampp\\htdocs\\cms_test\\admin\\themes\\OneEleven\\templates\\messages.tpl',
-      1 => 1743727863,
+      1 => 1745009323,
       2 => 'file',
     ),
   ),
@@ -20,7 +20,7 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   array (
   ),
 ),false)) {
-function content_67ffa5a0c73333_91405473 (Smarty_Internal_Template $_smarty_tpl) {
+function content_6804d18e171bd6_21277275 (Smarty_Internal_Template $_smarty_tpl) {
 if ((isset($_smarty_tpl->tpl_vars['errors']->value)) && $_smarty_tpl->tpl_vars['errors']->value[0] != '') {?><aside class="message pageerrorcontainer" role="alert"><?php
 $_from = $_smarty_tpl->smarty->ext->_foreach->init($_smarty_tpl, $_smarty_tpl->tpl_vars['errors']->value, 'error');
 $_smarty_tpl->tpl_vars['error']->do_else = true;

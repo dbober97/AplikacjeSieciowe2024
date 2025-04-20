@@ -1,18 +1,18 @@
 <?php
-/* Smarty version 4.2.1, created on 2025-04-16 14:42:08
+/* Smarty version 4.2.1, created on 2025-04-20 12:50:53
   from 'C:\xampp-starszy\xampp\htdocs\cms_test\admin\themes\OneEleven\templates\navigation.tpl' */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '4.2.1',
-  'unifunc' => 'content_67ffa5a09d67d9_41495706',
+  'unifunc' => 'content_6804d18dd59340_66231084',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
     '163eb0bda3fb5a5fbb013b061a0ad80c9f14aad9' => 
     array (
       0 => 'C:\\xampp-starszy\\xampp\\htdocs\\cms_test\\admin\\themes\\OneEleven\\templates\\navigation.tpl',
-      1 => 1743727863,
+      1 => 1745009323,
       2 => 'file',
     ),
   ),
@@ -20,7 +20,7 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   array (
   ),
 ),false)) {
-function content_67ffa5a09d67d9_41495706 (Smarty_Internal_Template $_smarty_tpl) {
+function content_6804d18dd59340_66231084 (Smarty_Internal_Template $_smarty_tpl) {
 if (!(isset($_smarty_tpl->tpl_vars['depth']->value))) {
 $_smarty_tpl->_assignInScope('depth', '0');
 }

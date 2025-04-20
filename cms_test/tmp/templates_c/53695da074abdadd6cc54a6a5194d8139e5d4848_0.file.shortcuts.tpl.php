@@ -1,18 +1,18 @@
 <?php
-/* Smarty version 4.2.1, created on 2025-04-16 14:42:08
+/* Smarty version 4.2.1, created on 2025-04-20 12:50:53
   from 'C:\xampp-starszy\xampp\htdocs\cms_test\admin\themes\OneEleven\templates\shortcuts.tpl' */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '4.2.1',
-  'unifunc' => 'content_67ffa5a04c2e22_52056508',
+  'unifunc' => 'content_6804d18d7058c3_85090262',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
     '53695da074abdadd6cc54a6a5194d8139e5d4848' => 
     array (
       0 => 'C:\\xampp-starszy\\xampp\\htdocs\\cms_test\\admin\\themes\\OneEleven\\templates\\shortcuts.tpl',
-      1 => 1743727863,
+      1 => 1745009323,
       2 => 'file',
     ),
   ),
@@ -20,7 +20,7 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   array (
   ),
 ),false)) {
-function content_67ffa5a04c2e22_52056508 (Smarty_Internal_Template $_smarty_tpl) {
+function content_6804d18d7058c3_85090262 (Smarty_Internal_Template $_smarty_tpl) {
 $_smarty_tpl->_checkPlugins(array(0=>array('file'=>'C:\\xampp-starszy\\xampp\\htdocs\\cms_test\\lib\\plugins\\function.root_url.php','function'=>'smarty_function_root_url',),));
 ?>
 <div class="shortcuts"><ul class="cf"><li class="help"><?php if ((isset($_smarty_tpl->tpl_vars['module_help_url']->value))) {?><a href="<?php echo $_smarty_tpl->tpl_vars['module_help_url']->value;?>

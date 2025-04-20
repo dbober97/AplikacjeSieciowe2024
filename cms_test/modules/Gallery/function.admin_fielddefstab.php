@@ -68,7 +68,7 @@ $smarty->assign('type', $this->Lang('type'));
 $smarty->assign('public', $this->Lang('public'));
 
 $smarty->assign('newfielddeflink', $this->CreateLink($id, 'editfielddef', $returnid, $admintheme->DisplayImage('icons/system/newfolder.gif', $this->Lang('addfielddef'), '', '', 'systemicon'), array('mode' => 'add'), '', false, false, '') . ' ' .
-		  $this->CreateLink($id, 'editfielddef', $returnid, $this->Lang('addfielddef'), array('mode' => 'add')));
+		$this->CreateLink($id, 'editfielddef', $returnid, $this->Lang('addfielddef'), array('mode' => 'add')));
 
 $smarty->assign('formstart', $this->CreateFormStart($id, 'editfielddef', $returnid, 'post'));
 $smarty->assign('formend', $this->CreateFormEnd());

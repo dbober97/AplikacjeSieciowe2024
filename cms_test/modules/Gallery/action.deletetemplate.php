@@ -8,8 +8,7 @@
 # This project's homepage is: http://www.cmsmadesimple.org
 #-------------------------------------------------------------------------------
 
-if (!function_exists('cmsms'))
-	exit;
+if (!function_exists('cmsms')) exit;
 
 if (!$this->CheckPermission('Modify Templates'))
 {

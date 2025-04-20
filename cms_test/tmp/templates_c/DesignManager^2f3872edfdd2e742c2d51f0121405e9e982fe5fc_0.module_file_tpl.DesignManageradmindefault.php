@@ -1,18 +1,18 @@
 <?php
-/* Smarty version 4.2.1, created on 2025-04-16 14:44:06
+/* Smarty version 4.2.1, created on 2025-04-20 14:54:18
   from 'module_file_tpl:DesignManager;admin_defaultadmin_csstooltip.tpl' */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '4.2.1',
-  'unifunc' => 'content_67ffa616195a89_25883629',
+  'unifunc' => 'content_6804ee7a55ed57_26462690',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
     '2f3872edfdd2e742c2d51f0121405e9e982fe5fc' => 
     array (
       0 => 'module_file_tpl:DesignManager;admin_defaultadmin_csstooltip.tpl',
-      1 => 1743727897,
+      1 => 1745009323,
       2 => 'module_file_tpl',
     ),
   ),
@@ -20,7 +20,7 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   array (
   ),
 ),false)) {
-function content_67ffa616195a89_25883629 (Smarty_Internal_Template $_smarty_tpl) {
+function content_6804ee7a55ed57_26462690 (Smarty_Internal_Template $_smarty_tpl) {
 $_smarty_tpl->_checkPlugins(array(0=>array('file'=>'C:\\xampp-starszy\\xampp\\htdocs\\cms_test\\admin\\plugins\\function.cms_admin_user.php','function'=>'smarty_function_cms_admin_user',),1=>array('file'=>'C:\\xampp-starszy\\xampp\\htdocs\\cms_test\\lib\\plugins\\modifier.localedate_format.php','function'=>'smarty_modifier_localedate_format',),2=>array('file'=>'C:\\xampp-starszy\\xampp\\htdocs\\cms_test\\lib\\plugins\\modifier.relative_time.php','function'=>'smarty_modifier_relative_time',),3=>array('file'=>'C:\\xampp-starszy\\xampp\\htdocs\\cms_test\\lib\\plugins\\modifier.cms_date_format.php','function'=>'smarty_modifier_cms_date_format',),4=>array('file'=>'C:\\xampp-starszy\\xampp\\htdocs\\cms_test\\lib\\plugins\\modifier.cms_escape.php','function'=>'smarty_modifier_cms_escape',),5=>array('file'=>'C:\\xampp-starszy\\xampp\\htdocs\\cms_test\\lib\\plugins\\modifier.summarize.php','function'=>'smarty_modifier_summarize',),));
 if ($_smarty_tpl->tpl_vars['css']->value->locked()) {
 $_smarty_tpl->_assignInScope('lock', $_smarty_tpl->tpl_vars['css']->value->get_lock());

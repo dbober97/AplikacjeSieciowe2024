@@ -1,18 +1,18 @@
 <?php
-/* Smarty version 4.2.1, created on 2025-04-16 14:44:02
+/* Smarty version 4.2.1, created on 2025-04-20 14:54:12
   from 'module_file_tpl:DesignManager;admin_defaultadmin_stylesheets.tpl' */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '4.2.1',
-  'unifunc' => 'content_67ffa612eef732_17994892',
+  'unifunc' => 'content_6804ee74188791_83774773',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
     '8294edbe2ea7cc4aceacbeb51475e8865bb58acd' => 
     array (
       0 => 'module_file_tpl:DesignManager;admin_defaultadmin_stylesheets.tpl',
-      1 => 1743727897,
+      1 => 1745009323,
       2 => 'module_file_tpl',
     ),
   ),
@@ -20,7 +20,7 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   array (
   ),
 ),false)) {
-function content_67ffa612eef732_17994892 (Smarty_Internal_Template $_smarty_tpl) {
+function content_6804ee74188791_83774773 (Smarty_Internal_Template $_smarty_tpl) {
 $_smarty_tpl->_checkPlugins(array(0=>array('file'=>'C:\\xampp-starszy\\xampp\\htdocs\\cms_test\\lib\\plugins\\function.form_start.php','function'=>'smarty_function_form_start',),1=>array('file'=>'C:\\xampp-starszy\\xampp\\htdocs\\cms_test\\lib\\smarty\\plugins\\function.html_options.php','function'=>'smarty_function_html_options',),2=>array('file'=>'C:\\xampp-starszy\\xampp\\htdocs\\cms_test\\lib\\plugins\\function.form_end.php','function'=>'smarty_function_form_end',),));
 echo '<script'; ?>
  type="text/javascript">

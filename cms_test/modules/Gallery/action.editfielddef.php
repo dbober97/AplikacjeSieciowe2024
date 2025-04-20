@@ -155,7 +155,7 @@ switch ($params['mode'])
 
 		$smarty->assign('title', $this->Lang('editfielddef'));
 		$smarty->assign('hidden', $this->CreateInputHidden($id, 'fieldid', $params['fieldid']) .
-				  $this->CreateInputHidden($id, 'mode', 'edit'));
+				$this->CreateInputHidden($id, 'mode', 'edit'));
 		break;
 
 
@@ -203,12 +203,12 @@ switch ($params['mode'])
 
 
 $typelist = array(
-	 $this->Lang('textinput') => 'textinput',
-	 $this->Lang('dropdown') => 'dropdown',
-	 $this->Lang('checkbox') => 'checkbox',
-	 $this->Lang('radiobuttons') => 'radiobuttons',
-	 $this->Lang('textarea') => 'textarea',
-	 $this->Lang('wysiwyg') => 'wysiwyg');
+	$this->Lang('textinput') => 'textinput',
+	$this->Lang('dropdown') => 'dropdown',
+	$this->Lang('checkbox') => 'checkbox',
+	$this->Lang('radiobuttons') => 'radiobuttons',
+	$this->Lang('textarea') => 'textarea',
+	$this->Lang('wysiwyg') => 'wysiwyg');
 
 $smarty->assign('prompt_name', $this->Lang('prompt_name'));
 $smarty->assign('name', $this->CreateInputText($id, 'name', $field['name'], 40));

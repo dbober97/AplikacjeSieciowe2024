@@ -183,7 +183,7 @@ foreach ($val as $elem)
 
 				// finished a first file
 				if (!isset($tpldetails['name']) || !isset($tpldetails['version']) ||
-						  !isset($tpldetails['filename']) || !isset($tpldetails['isdir']))
+						!isset($tpldetails['filename']) || !isset($tpldetails['isdir']))
 				{
 					$params = array('module_error' => lang('errorcouldnotparsexml') . ' ' . $fn, 'active_tab' => 'templates');
 					$this->Redirect($id, 'defaultadmin', $returnid, $params);

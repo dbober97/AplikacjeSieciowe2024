@@ -30,11 +30,11 @@ if (!empty($params['x2']) && !empty($params['y2']))
 	if ($params['template'] == 0)
 	{
 		$tplthumb = array(
-			 'templateid' => 0,
-			 'thumbname' => Gallery_utils::DefaultGalleryPath() . $image['filepath'] . IM_PREFIX . $image['filename'],
-			 'thumbwidth' => IM_THUMBWIDTH,
-			 'thumbheight' => IM_THUMBHEIGHT,
-			 'resizemethod' => 'sc'
+			'templateid' => 0,
+			'thumbname' => Gallery_utils::DefaultGalleryPath() . $image['filepath'] . IM_PREFIX . $image['filename'],
+			'thumbwidth' => IM_THUMBWIDTH,
+			'thumbheight' => IM_THUMBHEIGHT,
+			'resizemethod' => 'sc'
 		);
 	}
 	else

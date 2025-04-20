@@ -8,8 +8,7 @@
 # This project's homepage is: http://www.cmsmadesimple.org
 #-------------------------------------------------------------------------------
 
-if (!function_exists('cmsms'))
-	exit;
+if (!function_exists('cmsms')) exit;
 
 if (!$this->CheckPermission('Modify Templates') || !$this->CheckPermission('Use Gallery'))
 {
@@ -34,11 +33,12 @@ if ($params['mode'] == 'switchactive')
 
 $admintheme = cms_utils::get_theme_object();
 
+//$params['origaction'] = $params['action'];
 $templateprops = array('templateid' => 0, 'version' => "1.0", 'about' => "", 'thumbwidth' => "", 'thumbheight' => "", 'resizemethod' => "", 'maxnumber' => "", 'sortitems' => "", 'jsposition' => 0);
 $contents = "";
 if ($params['mode'] == 'add')
 {
-	$smarty->assign('formstart', $this->CreateFormStart($id, 'do_addtemplate', $returnid, 'post', '', false, '', array()));
+	$smarty->assign('formstart', $this->CreateFormStart($id, 'do_addtemplate', $returnid, 'post', '', false, '', array())); //$params));
 	$smarty->assign('templatename', $this->CreateInputText($id, 'template', "", 40));
 	if (isset($params['defaulttemplatepref']) && $params['defaulttemplatepref'] != '')
 	{
@@ -65,19 +65,19 @@ else
 }
 
 $smarty->assign('hidden', $this->CreateInputHidden($id, 'templateid', $templateprops['templateid']) .
-		  $this->CreateInputHidden($id, 'version', $templateprops['version']) .
-		  $this->CreateInputHidden($id, 'about', $templateprops['about'])
+		$this->CreateInputHidden($id, 'version', $templateprops['version']) .
+		$this->CreateInputHidden($id, 'about', $templateprops['about'])
 );
 
 $smarty->assign('prompt_thumbnailsize', $this->Lang('thumbnailsize'));
 $resizemethodlist = array($this->Lang('crop') => 'cr', $this->Lang('scale') => 'sc', $this->Lang('zoomcrop') => 'zc', $this->Lang('zoomscale') => 'zs');
 $smarty->assign('thumbnailsize', $this->Lang('leaveempty') . '<br />' .
-		  $this->Lang('width') . ':&nbsp;' .
-		  $this->CreateInputText($id, 'thumbwidth', $templateprops['thumbwidth'], 4, 4) .
-		  '&nbsp;&nbsp;&nbsp;' . $this->Lang('height') . ':&nbsp;' .
-		  $this->CreateInputText($id, 'thumbheight', $templateprops['thumbheight'], 4, 4) .
-		  '&nbsp;&nbsp;&nbsp;' . $this->Lang('resizemethod') . ':&nbsp;' .
-		  $this->CreateInputDropdown($id, 'resizemethod', $resizemethodlist, -1, $templateprops['resizemethod'])
+		$this->Lang('width') . ':&nbsp;' .
+		$this->CreateInputText($id, 'thumbwidth', $templateprops['thumbwidth'], 4, 4) .
+		'&nbsp;&nbsp;&nbsp;' . $this->Lang('height') . ':&nbsp;' .
+		$this->CreateInputText($id, 'thumbheight', $templateprops['thumbheight'], 4, 4) .
+		'&nbsp;&nbsp;&nbsp;' . $this->Lang('resizemethod') . ':&nbsp;' .
+		$this->CreateInputDropdown($id, 'resizemethod', $resizemethodlist, -1, $templateprops['resizemethod'])
 );
 
 $sortfieldlist = array(' -' => '', 'filename' => 's#file', 'filedate' => 's#filedate', 'title' => 's#title', 'titlename' => 's#titlename', 'comment' => 's#comment', 'subgallery (true/false)' => 'n#isdir', 'active (true/false)' => 'n#active');
@@ -87,13 +87,13 @@ $sortfields = '';
 foreach ($sortitems as $sortitem)
 {
 	$sortfields .= '<p class="sortfield">' .
-			  $this->CreateInputDropdown($id, 'sortfield[]', $sortfieldlist, -1, substr($sortitem, 0, 1) . '#' . substr($sortitem, 2)) . '&nbsp; ' .
-			  $this->CreateInputDropdown($id, 'sorttype[]', $sorttypelist, -1, substr($sortitem, 1, 1)) .
-			  '</p>';
+			$this->CreateInputDropdown($id, 'sortfield[]', $sortfieldlist, -1, substr($sortitem, 0, 1) . '#' . substr($sortitem, 2)) . '&nbsp; ' .
+			$this->CreateInputDropdown($id, 'sorttype[]', $sorttypelist, -1, substr($sortitem, 1, 1)) .
+			'</p>';
 }
 $smarty->assign('prompt_sortingoptions', $this->Lang('sortingoptions'));
 $smarty->assign('sortingoptions', '<p>' . $this->Lang('specifysortfields') . '</p>' .
-		  '<div id="sortfields">' . $sortfields . '</div>
+		'<div id="sortfields">' . $sortfields . '</div>
 	<p><a href="#" id="addfield">' . $this->Lang('addfield') . '</a>&nbsp;&nbsp;&nbsp;<a href="#" id="deletefield">' . $this->Lang('deletefield') . '</a></p>'
 );
 

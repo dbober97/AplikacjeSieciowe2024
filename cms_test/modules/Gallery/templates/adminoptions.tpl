@@ -19,20 +19,6 @@
 		<p class="pagetext">{$thumbjpgquality}:</p>
 		<p class="pageinput">{$input_thumbjpgquality} {$jpgquality_help}</p>
 	</div>
-	{if $imagewebsupport}
-	<div class="pageoverflow">
-		<p class="pagetext">{$imagewebpquality}:</p>
-		<p class="pageinput">{$input_imagewebpquality} {$webpquality_help}</p>
-	</div>
-	<div class="pageoverflow">
-		<p class="pagetext">{$thumbwebpquality}:</p>
-		<p class="pageinput">{$input_thumbwebpquality} {$webpquality_help}</p>
-	</div>
-    {else}
-    <div class="pageoverflow">
-        <p class="pagetext"><em>{$webpmissing_help}</em></p>
-    </div>
-    {/if}
 	<div class="pageoverflow">
 		<p class="pagetext">{$searchimages}:</p>
 		<p class="pageinput">{$input_searchimages}</p>

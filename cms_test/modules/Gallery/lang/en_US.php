@@ -18,8 +18,8 @@ $lang['down'] = 'Down';
 $lang['edit'] = 'Edit';
 $lang['error'] = 'Error!';
 $lang['inactive'] = 'Inactive';
-$lang['setfalse'] = 'Set False';
-$lang['settrue'] = 'Set True';
+$lang['setfalse']= 'Set False';
+$lang['settrue']= 'Set True';
 $lang['submit'] = 'Save';
 $lang['up'] = 'Up';
 
@@ -193,13 +193,9 @@ $lang['urlprefix'] = 'Prefix to use on all URLs from the Gallery module';
 $lang['urlprefix_help'] = 'This only applies when pretty urls are enabled either via mod_rewrite or internal pretty urls';
 $lang['allowed_extensions'] = 'Allowed Extensions';
 $lang['maxsize'] = 'Resize images to the following maximum size during upload';
-$lang['imagejpgquality'] = 'Resize quality for big jpg images';
-$lang['thumbjpgquality'] = 'Resize quality for jpg thumbnails';
-$lang['imagewebpquality'] = 'Resize quality for big webp images';
-$lang['thumbwebpquality'] = 'Resize quality for webp thumbnails';
+$lang['imagejpgquality'] = 'Resize quality for big images';
+$lang['thumbjpgquality'] = 'Resize quality for thumbnails';
 $lang['jpgquality_help'] = '(1 - 100)';
-$lang['webpquality_help'] = '(1 - 100)';
-$lang['webpmissing_help'] = "Your webserver doesn't support webp (gdlib)";
 $lang['searchimages'] = 'Search individual images in stead of subgalleries';
 $lang['use_permissions'] = 'Require userpermissions to edit subgalleries';
 $lang['newgalleries_active'] = 'New galleries are active by default';
@@ -305,6 +301,7 @@ $lang['help2'] = '<h3>What Does This Do?</h3>
 <h3>Support</h3>
 <p>This module does not include commercial support. However, there are a number of resources available to help you with it:</p>
 <ul>
+<!-- li>FAQs, extended module help and Troubleshooting can be found in the <a href="http://wiki.cmsms.nl/index.php/Gallery">Gallery Wiki Documentation</a>.</li -->
 <li>For the latest version of this module or to file a Feature Request or Bug Report, please visit the Module Forge
 <a href="http://dev.cmsmadesimple.org/projects/gallery/">Gallery Page</a>.</li>
 <li>Additional discussion of this module may also be found in the <a href="https://forum.cmsmadesimple.org">CMS Made Simple Forums</a>. You are warmly invited to open a new topic if you didn\'t find an answer to your question.</li>

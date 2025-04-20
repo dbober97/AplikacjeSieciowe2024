@@ -1,18 +1,18 @@
 <?php
-/* Smarty version 4.2.1, created on 2025-04-16 15:46:39
+/* Smarty version 4.2.1, created on 2025-04-20 14:54:22
   from 'module_file_tpl:DesignManager;admin_edit_template.tpl' */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '4.2.1',
-  'unifunc' => 'content_67ffb4bf9164f2_91500822',
+  'unifunc' => 'content_6804ee7e12b0c6_80934784',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
     '6f174197f4e726204367bec31a5c4c1276fc7935' => 
     array (
       0 => 'module_file_tpl:DesignManager;admin_edit_template.tpl',
-      1 => 1743727898,
+      1 => 1745009323,
       2 => 'module_file_tpl',
     ),
   ),
@@ -20,7 +20,7 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   array (
   ),
 ),false)) {
-function content_67ffb4bf9164f2_91500822 (Smarty_Internal_Template $_smarty_tpl) {
+function content_6804ee7e12b0c6_80934784 (Smarty_Internal_Template $_smarty_tpl) {
 $_smarty_tpl->_checkPlugins(array(0=>array('file'=>'C:\\xampp-starszy\\xampp\\htdocs\\cms_test\\lib\\plugins\\function.form_start.php','function'=>'smarty_function_form_start',),1=>array('file'=>'C:\\xampp-starszy\\xampp\\htdocs\\cms_test\\admin\\plugins\\function.cms_help.php','function'=>'smarty_function_cms_help',),2=>array('file'=>'C:\\xampp-starszy\\xampp\\htdocs\\cms_test\\lib\\plugins\\modifier.cms_date_format.php','function'=>'smarty_modifier_cms_date_format',),3=>array('file'=>'C:\\xampp-starszy\\xampp\\htdocs\\cms_test\\admin\\plugins\\function.tab_header.php','function'=>'smarty_function_tab_header',),4=>array('file'=>'C:\\xampp-starszy\\xampp\\htdocs\\cms_test\\admin\\plugins\\function.tab_start.php','function'=>'smarty_function_tab_start',),5=>array('file'=>'C:\\xampp-starszy\\xampp\\htdocs\\cms_test\\lib\\plugins\\function.cms_textarea.php','function'=>'smarty_function_cms_textarea',),6=>array('file'=>'C:\\xampp-starszy\\xampp\\htdocs\\cms_test\\lib\\smarty\\plugins\\function.html_options.php','function'=>'smarty_function_html_options',),7=>array('file'=>'C:\\xampp-starszy\\xampp\\htdocs\\cms_test\\lib\\plugins\\function.cms_yesno.php','function'=>'smarty_cms_function_cms_yesno',),8=>array('file'=>'C:\\xampp-starszy\\xampp\\htdocs\\cms_test\\admin\\plugins\\function.tab_end.php','function'=>'smarty_function_tab_end',),9=>array('file'=>'C:\\xampp-starszy\\xampp\\htdocs\\cms_test\\lib\\plugins\\function.form_end.php','function'=>'smarty_function_form_end',),));
 echo '<script'; ?>
  type="text/javascript">

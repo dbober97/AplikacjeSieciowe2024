@@ -55,7 +55,7 @@ $smarty->assign('defaultprompt', $this->Lang('prompt_default'));
 $smarty->assign('visibleprompt', $this->Lang('prompt_visible'));
 
 $smarty->assign('newtemplatelink', $this->CreateLink($id, 'edittemplate', $returnid, $admintheme->DisplayImage('icons/system/newobject.gif', $this->Lang('prompt_newtemplate'), '', '', 'systemicon'), array('mode' => 'add', 'defaulttemplatepref' => 'default_template_contents'), '', false, false, '') . ' ' .
-		  $this->CreateLink($id, 'edittemplate', $returnid, $this->Lang('prompt_newtemplate'), array('mode' => 'add', 'defaulttemplatepref' => 'default_template_contents')));
+		$this->CreateLink($id, 'edittemplate', $returnid, $this->Lang('prompt_newtemplate'), array('mode' => 'add', 'defaulttemplatepref' => 'default_template_contents')));
 
 
 

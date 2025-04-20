@@ -13,39 +13,32 @@ class Gallery_utils {
 	protected function __construct() {
 		
 	}
-
-	public static function DefaultGalleryPath() {
-		$config = cmsms()->GetConfig();
-		return cms_join_path($config['image_uploads_path'], DEFAULT_GALLERY_PATH) . DIRECTORY_SEPARATOR;
-	}
-
-	public static function DefaultGalleryUrl() {
-		$config = cmsms()->GetConfig();
-		return $config['uploads_url'] . '/images/' . DEFAULT_GALLERY_PATH . '/';
-	}
-
-	public static function DefaultGalleryThumbsPath() {
-		$config = cmsms()->GetConfig();
-		return cms_join_path($config['image_uploads_path'], DEFAULT_GALLERYTHUMBS_PATH) . DIRECTORY_SEPARATOR;
-	}
-
-	public static function DefaultGalleryThumbsUrl() {
-		$config = cmsms()->GetConfig();
-		return $config['uploads_url'] . '/images/' . DEFAULT_GALLERYTHUMBS_PATH . '/';
-	}
+  
+  public static function DefaultGalleryPath() {
+    $config = cmsms()->GetConfig();
+    return cms_join_path($config['image_uploads_path'], DEFAULT_GALLERY_PATH) . DIRECTORY_SEPARATOR;
+  }
+  public static function DefaultGalleryUrl() {
+    $config = cmsms()->GetConfig();
+    return $config['uploads_url'] . '/images/' . DEFAULT_GALLERY_PATH . '/';
+  }
+  public static function DefaultGalleryThumbsPath() {
+    $config = cmsms()->GetConfig();
+    return cms_join_path($config['image_uploads_path'], DEFAULT_GALLERYTHUMBS_PATH) . DIRECTORY_SEPARATOR;
+  }
+  public static function DefaultGalleryThumbsUrl() {
+    $config = cmsms()->GetConfig();
+    return $config['uploads_url'] . '/images/' . DEFAULT_GALLERYTHUMBS_PATH . '/';
+  }
 
 	public static function Getdirfiles($path, $recursive) {
 		$mod = cms_utils::get_module('Gallery');
-
+    
 
 		$path = empty($path) ? '' : trim($path, '/') . '/';
 		$updir = is_dir(self::DefaultGalleryPath() . $path) ? '' : '../';
 		$allowext = explode(',', $mod->GetPreference('allowed_extensions', ''));
 		$maxext = array('jpg', 'jpeg', 'gif', 'png');
-		if (gd_info()['WebP Support'])
-		{
-			$maxext[] = 'webp';
-		}
 		$output = array();
 		if ($handle = opendir(str_replace('/', DIRECTORY_SEPARATOR, self::DefaultGalleryPath() . $path)))
 		{
@@ -56,9 +49,9 @@ class Gallery_utils {
 				{
 					$filename = is_dir(self::DefaultGalleryPath() . $path . $file) ? $file . '/' : $file;
 					$output[$path . $filename] = array(
-						 'filename' => $filename,
-						 'filepath' => $path,
-						 'filemdate' => date("Y-m-d H:i:s", filemtime(self::DefaultGalleryPath() . $path . $file)),
+						'filename' => $filename,
+						'filepath' => $path,
+						'filemdate' => date("Y-m-d H:i:s", filemtime(self::DefaultGalleryPath() . $path . $file)),
 					);
 					if ($recursive && is_dir(self::DefaultGalleryPath() . $path . $file))
 					{
@@ -262,7 +255,7 @@ class Gallery_utils {
 					$delete_ids[] = $item['fileid'];
 					// delete thumbs created for this image
 					self::DeleteFiles(self::DefaultGalleryThumbsPath(), $item['fileid'] . '-*', false);
-				}
+        }
 			}
 			if (isset($delete_ids))
 			{
@@ -308,9 +301,8 @@ class Gallery_utils {
 	}
 
 	public static function DeleteFiles($dir, $pattern = '*', $deletedir = true) {
-		$dir = str_replace(array("[", "]", "{", "}"), array("<<[>>", "<<]>>", "<<{>>", "<<}>>"), $dir);
-		$dir = str_replace(array("<<", ">>"), array("[", "]"), $dir);
 		$deletefiles = glob($dir . $pattern, GLOB_MARK);
+    //$deletefiles = glob(preg_replace('/(\*|\?|\{|\[)/', '[$1]', $dir) . $pattern);
 
 		foreach ($deletefiles as $file)
 		{
@@ -360,7 +352,7 @@ class Gallery_utils {
 				if (!empty($id))
 				{
 					$fieldname = 'field[' . $row['fieldid'] . ']';
-					$output[$alias]['publicfieldhtml'] = $mod->CreateInputHidden($id, 'public' . $fieldname, $row['public']);
+          $output[$alias]['publicfieldhtml'] = $mod->CreateInputHidden($id, 'public' . $fieldname, $row['public']);
 					switch ($row['type'])
 					{
 						case 'textinput':
@@ -400,90 +392,90 @@ class Gallery_utils {
 	}
 
 	public static function ArraySort($array, $arguments = array(), $keys = true) {
+    
+    // http://dev.cmsmadesimple.org/bug/view/11958
+    // Thanks gregor!
+    uasort($array,function($a,$b) use ($arguments){
+      $result = 0;
 
-		// http://dev.cmsmadesimple.org/bug/view/11958
-		// Thanks gregor!
-		uasort($array, function($a, $b) use ($arguments) {
-			$result = 0;
+      foreach ($arguments as $argument) {
 
-			foreach ($arguments as $argument)
+        if (!empty($argument)){
+
+          if (!Is_Numeric($result) || $result == 0){
+            // order field
+            $field = substr($argument, 2, strlen($argument));
+            // sort type ("s" -> string, "n" -> numeric)
+            $type = $argument[0];
+            // sort order ("+" -> "ASC", "-" -> "DESC")
+            $order = $argument[1];
+
+            if (strtolower($type) == "n"){ // if "numeric" sort type
+              $result = ($order == "-")
+              ? ($a->$field > $b->$field ? -1 : ($a->$field < $b->$field ? 1 : 0))
+              : ($a->$field > $b->$field ? 1 : ($a->$field < $b->$field ? -1 : 0));
+            }
+            else // if "string" sort type
+            {
+              $result = ($order == "-")
+              ? strcoll($a->$field, $b->$field) * -1
+              : strcoll($a->$field, $b->$field);
+            }
+          }
+        }
+      }
+      return $result;
+    });
+
+    // return array
+    return $array;    
+    
+   /*
+		// source:  http://nl2.php.net/manual/en/function.uasort.php#42723
+		// comparing function code
+		$code = "\$result=0; ";
+
+		// foreach sorting argument (array key)
+		foreach ($arguments as $argument)
+		{
+			if (!empty($argument))
 			{
+				// order field
+				$field = substr($argument, 2, strlen($argument));
 
-				if (!empty($argument))
+				// sort type ("s" -> string, "n" -> numeric)
+				$type = $argument[0];
+
+				// sort order ("+" -> "ASC", "-" -> "DESC")
+				$order = $argument[1];
+
+				// add "if" statement, which checks if this argument should be used
+				$code .= "if (!Is_Numeric(\$result) || \$result == 0) ";
+
+				// if "numeric" sort type
+				if (strtolower($type) == "n")
 				{
-
-					if (!Is_Numeric($result) || $result == 0)
-					{
-						// order field
-						$field = substr($argument, 2, strlen($argument));
-						// sort type ("s" -> string, "n" -> numeric)
-						$type = $argument[0];
-						// sort order ("+" -> "ASC", "-" -> "DESC")
-						$order = $argument[1];
-
-						if (strtolower($type) == "n")
-						{ // if "numeric" sort type
-							$result = ($order == "-") ? ($a->$field > $b->$field ? -1 : ($a->$field < $b->$field ? 1 : 0)) : ($a->$field > $b->$field ? 1 : ($a->$field < $b->$field ? -1 : 0));
-						}
-						else // if "string" sort type
-						{
-							$result = ($order == "-") ? strcoll($a->$field, $b->$field) * -1 : strcoll($a->$field, $b->$field);
-						}
-					}
+					$code .= $order == "-" ? "\$result = (\$a->{$field} > \$b->{$field} ? -1 : (\$a->{$field} < \$b->{$field} ? 1 : 0));" : "\$result = (\$a->{$field} > \$b->{$field} ? 1 : (\$a->{$field} < \$b->{$field} ? -1 : 0)); ";
+				}
+				else
+				{
+					// if "string" sort type
+					$code .= $order == "-" ? "\$result = strcoll(\$a->{$field}, \$b->{$field}) * -1;" : "\$result = strcoll(\$a->{$field}, \$b->{$field}); ";
 				}
 			}
-			return $result;
-		});
+		}
+		// return result
+		$code .= "return \$result;";
+
+		// create comparing function
+		$compare = create_function('$a, $b', $code);
+
+		// sort array and preserve keys
+		uasort($array, $compare);
 
 		// return array
 		return $array;
-
-		/*
-		  // source:  http://nl2.php.net/manual/en/function.uasort.php#42723
-		  // comparing function code
-		  $code = "\$result=0; ";
-
-		  // foreach sorting argument (array key)
-		  foreach ($arguments as $argument)
-		  {
-		  if (!empty($argument))
-		  {
-		  // order field
-		  $field = substr($argument, 2, strlen($argument));
-
-		  // sort type ("s" -> string, "n" -> numeric)
-		  $type = $argument[0];
-
-		  // sort order ("+" -> "ASC", "-" -> "DESC")
-		  $order = $argument[1];
-
-		  // add "if" statement, which checks if this argument should be used
-		  $code .= "if (!Is_Numeric(\$result) || \$result == 0) ";
-
-		  // if "numeric" sort type
-		  if (strtolower($type) == "n")
-		  {
-		  $code .= $order == "-" ? "\$result = (\$a->{$field} > \$b->{$field} ? -1 : (\$a->{$field} < \$b->{$field} ? 1 : 0));" : "\$result = (\$a->{$field} > \$b->{$field} ? 1 : (\$a->{$field} < \$b->{$field} ? -1 : 0)); ";
-		  }
-		  else
-		  {
-		  // if "string" sort type
-		  $code .= $order == "-" ? "\$result = strcoll(\$a->{$field}, \$b->{$field}) * -1;" : "\$result = strcoll(\$a->{$field}, \$b->{$field}); ";
-		  }
-		  }
-		  }
-		  // return result
-		  $code .= "return \$result;";
-
-		  // create comparing function
-		  $compare = create_function('$a, $b', $code);
-
-		  // sort array and preserve keys
-		  uasort($array, $compare);
-
-		  // return array
-		  return $array;
-		 */
+   */
 	}
 
 	public static function CleanFile($filename) {
@@ -590,9 +582,6 @@ class Gallery_utils {
 					imagefill($newimage, 0, 0, $trnprt_color);
 					imagesavealpha($newimage, true);
 					break;
-				case IMAGETYPE_WEBP:
-					$source = imagecreatefromwebp($image);
-					break;
 				default:
 					return FALSE;
 			}
@@ -609,9 +598,6 @@ class Gallery_utils {
 				case IMAGETYPE_PNG:
 					imagepng($newimage, $thumbname);
 					break;
-				case IMAGETYPE_WEBP:
-					imagewebp($newimage, $thumbname, $mod->GetPreference('thumbwebpquality', 90));
-					break;
 				default:
 					return FALSE;
 			}
@@ -623,7 +609,7 @@ class Gallery_utils {
 	public static function RotateImage($image, $degrees) {
 		$mod = cms_utils::get_module('Gallery');
 		$imgdata = @getimagesize($image);
-
+		$source = imagecreatefromjpeg($image);
 		switch ($imgdata[2])
 		{
 			case IMAGETYPE_GIF:
@@ -634,9 +620,6 @@ class Gallery_utils {
 				break;
 			case IMAGETYPE_PNG:
 				$source = imagecreatefrompng($image);
-				break;
-			case IMAGETYPE_WEBP:
-				$source = imagecreatefromwebp($image);
 				break;
 			default:
 				return FALSE;
@@ -663,9 +646,6 @@ class Gallery_utils {
 			case IMAGETYPE_JPEG:
 				imagejpeg($newimage, $image, $mod->GetPreference('imagejpgquality', 80));
 				break;
-			case IMAGETYPE_WEBP:
-				imagewebp($newimage, $image, $mod->GetPreference('imagewebpquality', 90));
-				break;
 			case IMAGETYPE_PNG:
 				imagealphablending($newimage, false);
 				$trnprt_color = imagecolorallocatealpha($newimage, 0, 0, 0, 127);
@@ -676,7 +656,7 @@ class Gallery_utils {
 		}
 		imagedestroy($newimage);
 
-		$pos = strrpos($image, DIRECTORY_SEPARATOR);
+		$pos = strrpos($image, '/');
 		$thumbname = $pos === FALSE ? IM_PREFIX . $image : substr_replace($image, IM_PREFIX, $pos + 1, 0);
 
 		// create default thumbnail

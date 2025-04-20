@@ -8,8 +8,7 @@
 # This project's homepage is: http://www.cmsmadesimple.org
 #-------------------------------------------------------------------------------
 
-if (!function_exists('cmsms'))
-	exit;
+if (!function_exists('cmsms')) exit;
 
 $includesubdir = (isset($params['dir']) && substr($params['dir'], -1) == "*") ? TRUE : FALSE;
 $params['dir'] = isset($params['dir']) ? rawurldecode(cms_html_entity_decode(trim(trim($params['dir'], "*"), "/"))) : '';
@@ -211,17 +210,15 @@ $smarty->display($this->GetDatabaseResource($template));
 $templatecode = $this->GetTemplate($template);
 $templatecodearr = explode(TEMPLATE_SEPARATOR, $templatecode);
 
-if (empty($this->GalleryCSS))
-	$this->GalleryCSS = '';
-if (empty($this->GalleryJS))
-	$this->GalleryJS = '';
+if (empty($this->GalleryCSS)) $this->GalleryCSS = '';
+if (empty($this->GalleryJS)) $this->GalleryJS = '';
 $templatetitle = '<!-- Gallery/' . $template . ' -->';
 
-if (stripos($this->GalleryCSS, $templatetitle) === FALSE)
+if (stripos($this->GalleryCSS, $templatetitle) === FALSE )
 {
 	$template_head = '';
-	$smarty->assign('gallery_module_root', $this->GetModuleURLPath());
-	$template_js = isset($templatecodearr[2]) ? $smarty->fetch('eval:' . trim(substr($templatecodearr[2], 0, -2))) : '';
+  $smarty->assign('gallery_module_root', $this->GetModuleURLPath());
+  $template_js = isset($templatecodearr[2]) ? $smarty->fetch('eval:' . trim(substr($templatecodearr[2], 0, -2))) : '';
 	// check if a css file exists and echo
 	$alias = str_replace('__', '_', str_replace('-', '_', munge_string_to_url($template)));
 
@@ -230,15 +227,14 @@ if (stripos($this->GalleryCSS, $templatetitle) === FALSE)
 		$template_head .= '
 	<link rel="stylesheet" href="' . $this->GetModuleURLPath() . '/templates/css/' . $alias . '.css" type="text/css" media="screen" />';
 	}
-	if (!$jsposition && !empty($template_js))
+	if (!$jsposition && !empty($template_js)) 
 	{
 		$template_head .= '
 	' . $template_js;
 	}
-	if (!empty($template_head))
-		$this->GalleryCSS .= $templatetitle . $template_head . '
+	if (!empty($template_head)) $this->GalleryCSS .= $templatetitle . $template_head . '
 	';
-
+	
 	if ($jsposition && !empty($template_js))
 	{
 		$this->GalleryJS .= $templatetitle . '
@@ -246,4 +242,5 @@ if (stripos($this->GalleryCSS, $templatetitle) === FALSE)
 	';
 	}
 }
+
 ?>

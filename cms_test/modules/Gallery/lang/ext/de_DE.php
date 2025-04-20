@@ -53,7 +53,7 @@ $lang['sureupdatethumbs'] = 'Wollen Sie wirklich die Vorschaubilder löschen?';
 $lang['thumbsrecreated'] = 'Beim ersten Besuch der Galerie werden sie neu erstellt';
 $lang['thumbsdeleted'] = 'Die Vorschaubilder wurden gelöscht.';
 $lang['galleryupdated'] = 'Die Galerie wurde aktualisiert.';
-$lang['withselected'] = 'Gewählte';
+$lang['withselected'] = 'ausgewählte Dateien';
 $lang['moveto'] = 'Verschieben nach';
 $lang['imageupdated'] = 'Die Bilddetails wurden aktualisiert.';
 $lang['imagedetailsupdated'] = 'Die Bildinformationen sind aktuell.';
@@ -181,15 +181,10 @@ $lang['urlprefix'] = 'Präfix, der in allen URLs des Gallery-Moduls verwendet we
 $lang['urlprefix_help'] = 'Dies funktioniert nur, wenn die Pretty URLs via mod_rewrite oder die internen Pretty URLs aktiviert wurden';
 $lang['allowed_extensions'] = 'Erlaubte Dateiendungen';
 $lang['maxsize'] = 'Vor dem Hochladen die Größe der Bilder auf diese Maximalwerte ändern';
-$lang['imagejpgquality'] = 'Qualität bei Größenänderung für große .jpg Bilder';
-$lang['thumbjpgquality'] = 'Qualität bei Größenänderung für .jpg Vorschaubilder';
-$lang['imagewebpquality'] = 'Qualität bei Größenänderung für große .webp Bilder';
-$lang['thumbwebpquality'] = 'Qualität bei Größenänderung für .webp Vorschaubilder';
+$lang['imagejpgquality'] = 'Qualität bei Größenänderung für große Bilder';
+$lang['thumbjpgquality'] = 'Qualität bei Größenänderung für Vorschaubilder';
 $lang['jpgquality_help'] = '(1–100)';
-$lang['webpquality_help'] = '(1–100)';
-$lang['webpmissing_help'] = 'Ihr Webserver unterstützt kein webp (gdlib)';
-$lang['searchimages'] = 'Such einzelne Bilder statt Untergalerien';
-$lang['use_permissions'] = 'Benötigt Benutzerberechtigung zum Editieren von Untergalerien';
+$lang['use_permissions'] = 'Benötigt Benutzerberechtigung zum Editieren von Unter-Galerien';
 $lang['newgalleries_active'] = 'Neue Galerien sind standardmäßig aktiv';
 $lang['use_comment_wysiwyg'] = 'Einen WYSIWYG-Editor für das Kommentarfeld der Galerie verwenden';
 $lang['editdirdates'] = 'Benutzern erlauben, das Erstellungsdatum von untergeordneten Galerien zu bearbeiten';
@@ -275,6 +270,7 @@ $lang['help2'] = 'Mit <code>{Gallery img=\'123\'}</code> wird ein einzelnes Bild
 <h3>Support</h3>
 <p>Dieses Modul beinhaltet keinen kommerziellen Support. Sie können jedoch über folgende Möglichkeiten Hilfe zu dem Modul erhalten:</p>
 <ul>
+<!-- li>FAQs, weitere Hilfe und Troubleshooting kann man finden in <a href="http://wiki.cmsms.nl/index.php/Gallery">Gallery Wiki Documentation</a>.</li -->
 <li>Für die letzte Version dieses Moduls, dem Versand eines Fehlerreports oder Bugreports besuchen Sie bitte die <a href="http://dev.cmsmadesimple.org/projects/gallery/">Projektseite</a> im CMSms Forge.</li>
 <li>Weitere Diskussionen zu diesem Modul sind auch in den Foren von <a href="http://forum.cmsmadesimple.org">CMS Made Simple</a> zu finden.</li>
 <li>Letztlich erreichen Sie den Autor auch über eine direkte Email.</li>
